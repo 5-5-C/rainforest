@@ -1,6 +1,8 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%= @product.name %></h1>
 
-<!-- <%= link_to "Back to Products", products_url %> | <%= link_to "Edit", edit_product_path(@product) %>
-
-<p><%= @prodcut.title %></p> -->
+<hr>
+ <div class="button_bar">
+  <%= link_to 'Edit', edit_product_path, class: "button"  %>
+  <%= link_to 'Delete', product_path, method: :delete, class: "button", data: {confirm: "Are you sure you want to delete the location '#{@product.name}'? This cannot be undone!"} %>
+ </div>
+ <hr>
